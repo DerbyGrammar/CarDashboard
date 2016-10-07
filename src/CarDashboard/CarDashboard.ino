@@ -13,7 +13,7 @@ void loop() {
   lcdPrint(random(1,24), random(1,32), random(1,99), random(1,99), random(1,35), temp > 30 ? true : false);
 }
 
-void lcdPrint(int volt, int amp, int temp, int temp2, int mphspeed, bool isFanOn) {
+void lcdPrint(int volt, int cur, int temp, int temp2, int mphspeed, bool isFanOn) {
   bool lcdGoing;
   if(lcdGoing == false) {
    lcdGoing = true;
@@ -23,8 +23,8 @@ void lcdPrint(int volt, int amp, int temp, int temp2, int mphspeed, bool isFanOn
 
    lcd.print("VLT: ");
    lcd.print(volt);
-   lcd.print(" | AMP: ");
-   lcd.print(amp);
+   lcd.print(" | CUR: ");
+   lcd.print(CUR);
    lcd.setCursor(0,2);
 
    lcd.print("TMP: ");
