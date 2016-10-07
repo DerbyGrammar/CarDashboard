@@ -3,7 +3,7 @@
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-String firstLine = "DGS Racing";
+String firstLine = "DGS Racing"; // you can change this :)
 
 void setup() {
   randomSeed(analogRead(0));
