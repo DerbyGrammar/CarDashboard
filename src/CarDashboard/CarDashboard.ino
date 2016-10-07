@@ -10,6 +10,7 @@ void setup() {
 }
 
 void loop() {
+  int temp = getTemp();
   lcdPrint(random(1,24), random(1,32), random(1,99), random(1,99), random(1,35), temp > 30 ? true : false);
 }
 
@@ -43,5 +44,9 @@ void lcdPrint(int volt, int cur, int temp, int temp2, int mphspeed, bool isFanOn
 
    lcdGoing = false;
   }
+}
+
+int getTemp() {
+  return 1;
 }
 
