@@ -13,7 +13,6 @@ void loop() {
 
 void lcdPrint(int volt, int amp, int temp, int temp2, int mphspeed, bool isFanOn) {
   bool lcdGoing;
-
   if(!lcdGoing) {
    lcdGoing = true;
 
