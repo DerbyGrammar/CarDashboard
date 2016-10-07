@@ -18,6 +18,27 @@ void lcdPrint(int volt, int amp, int temp, int temp2, int mphspeed, bool isFanOn
   if(!lcdGoing) {
    lcdGoing = true;
 
+   lcd.print(firstLine);
+   lcd.setCursor(0,1);
+
+   lcd.print("VLT: ");
+   lcd.print(volt);
+   lcd.print(" | AMP: ");
+   lcd.print(amp);
+   lcd.setCursor(0,2);
+
+   lcd.print("TMP: ");
+   lcd.print(temp);
+   lcd.print(" | MPH: ");
+   lcd.print(mphspeed);
+   lcd.setCursor(0,3);
+
+   lcd.print("TMP: ");
+   lcd.print(temp2);
+   lcd.print(" | FAN: ");
+   lcd.print(isFanOn ? "ON" : "OFF");
+   lcd.setCursor(0,4);
+
    //do stuff here
 
    lcdGoing = false;
